@@ -123,6 +123,22 @@ public class LinkedList<T>
 
         return true;
     }
+
+    public List<T> ConvertToList()
+    {
+        Node<T> current = Head;
+        Node<T> previous = null;
+        List<T> result = new List<T>();
+
+        while (current != null)
+        {
+            result.Add(current.Data);
+            previous = current;
+            current = current.Next;
+        }
+
+        return result;
+    }
 }
 
 class Node<T>
