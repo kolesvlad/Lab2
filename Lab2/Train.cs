@@ -28,17 +28,13 @@ public class Train
     }
     
     public void RemoveCarriage(Carriage carriage)
-    {
-        if (!IsNewCarriageAccepted(carriage)) return;
-
+    { 
         Carriages.Remove(carriage);
     }
     
-    public void RemoveCarriage(Carriage carriage, int position)
+    public void RemoveCarriage(int position)
     {
-        if (!IsNewCarriageAccepted(carriage)) return;
-
-        Carriages.RemoveAt(carriage, position);
+        Carriages.RemoveAt(position);
     }
 
     public List<Carriage> FindCarriageByType(string type)

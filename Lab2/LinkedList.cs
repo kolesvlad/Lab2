@@ -90,13 +90,8 @@ public class LinkedList<T>
         return false;
     }
 
-    public bool RemoveAt(T data, int position)
+    public bool RemoveAt(int position)
     {
-        if (position >= Count)
-        {
-            throw new IndexOutOfRangeException();
-        }
-       
         if (Head == null)
         {
             return false;
@@ -127,13 +122,11 @@ public class LinkedList<T>
     public List<T> ConvertToList()
     {
         Node<T> current = Head;
-        Node<T> previous = null;
         List<T> result = new List<T>();
 
         while (current != null)
         {
             result.Add(current.Data);
-            previous = current;
             current = current.Next;
         }
 
