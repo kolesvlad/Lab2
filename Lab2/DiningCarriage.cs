@@ -2,11 +2,22 @@ namespace Lab2;
 
 public class DiningCarriage : Carriage
 {
-
-    public int TableCount { get; set; }
+    public int TablesCount { get; set; }
+    public bool HasKitchen { get; set; }
     
-    public DiningCarriage(int id, int type, int weight, int length, int tableCount) : base(id, type, weight, length)
+    public DiningCarriage(int id, string type, double weight, double length, int tablesCount, bool hasKitchen) : base(id, type, weight, length)
     {
-        TableCount = tableCount;
+        TablesCount = tablesCount;
+        HasKitchen = hasKitchen;
+    }
+
+    public override void SetNewId(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void ChangeConfiguration(string type, double weight, double length)
+    {
+        throw new NotImplementedException();
     }
 }
