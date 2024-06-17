@@ -4,6 +4,7 @@ class Program
 {
     static void Main()
     {
+        // Створюємо тетсові обʼєкти
         Carriage pCarriage1 = new PassengerCarriage(1, "passenger", 100.0, 100.0, 100, "first", 50);
         Carriage pCarriage2 = new PassengerCarriage(2, "passenger", 100.0, 100.0, 120, "second", 60);
         Carriage pCarriage3 = new PassengerCarriage(3, "passenger", 100.0, 100.0, 80, "second", 40);
@@ -27,6 +28,7 @@ class Program
         
         Train train = new Train(new Lab2.LinkedList<Carriage>(), "Intercity", "55");
         
+        // Тестуємо додавання і видалення вагонів із виведенням результату в консоль
         train.AddCarriage(pCarriage1);
         train.AddCarriage(pCarriage2);
         train.AddCarriage(dCarriage1);
@@ -39,6 +41,7 @@ class Program
         
         train.DisplayTrainCarriagesInfo();
         
+        // Перевірка працездатності інших методів згідно ТЗ
         train.FindCarriageByType("passenger");
         train.FindCarriageByWeight(50.0);
         train.FindCarriageByLength(50.0);
